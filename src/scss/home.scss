@@ -1,0 +1,55 @@
+//====================================================================================================
+.main {
+   text-align: center;
+   &__container {
+      background: url("@img/bg.png") top center no-repeat;
+      @media (max-width: $mobile) {
+         background: url("@img/bg.png") top center / 100% no-repeat;
+      }
+   }
+
+   &__img {
+      @media (max-width: $mobile) {
+         display: block;
+         width: 100%;
+      }
+   }
+}
+
+.link {
+   margin-top: rem(50);
+   &__container {
+      display: flex;
+      gap: rem(40);
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         gap: rem(25);
+      }
+   }
+
+   &__item {
+      border-radius: rem(30);
+      background-color: #e3ff59;
+      display: block;
+      width: 100%;
+      padding: rem(40) rem(20) rem(80);
+      img {
+         max-width: rem(70);
+      }
+      @media (max-width: $mobileSmall) {
+         padding-bottom: rem(50);
+      }
+   }
+
+   &__title {
+      font-weight: 700;
+      @include adaptiveValue("font-size", 42, 26);
+      margin-bottom: rem(15);
+   }
+
+   &__text {
+      font-weight: 700;
+   }
+}
+
+//====================================================================================================
